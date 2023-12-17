@@ -8,6 +8,9 @@
 #include <stdbool.h>
 #include <string.h>
 
+/* Comparison direction macros for bitonic sort */
+#define UP 0
+#define DOWN 1
 
 /**
  * struct listint_s - Doubly linked list node
@@ -47,5 +50,9 @@ void max_heapify(int *array, size_t size, size_t base, size_t root);
 void heap_sort(int *array, size_t size);
 void radix_sort(int *array, size_t size);
 void radix_counting_sort(int *array, size_t size, int sig, int *buff);
+void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
+		char flow);
+void bitonic_seq(int *array, size_t size, size_t start, size_t seq, char flow);
+void bitonic_sort(int *array, size_t size);
 
 #endif /* _SORT_H_ */
